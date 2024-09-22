@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {% if messages %}
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+    {% endif %}
+
+    <form method="post" >  
+        {% csrf_token %}  
+        <input type="text" placeholder="Wpisz sie" name="name">
+        <button type="submit">Klik</button>
+    </form>  
+
+    {% for name in names %}
+        {{ name }} <br>
+    {% endfor %}
+
+</body>
+</html>
