@@ -15,3 +15,7 @@ class User(models.Model):
         return self.name
 
 
+#moje zadanie bedzie takie
+#zrobic system logowania
+#class Name to uzytkownik
+#zrobic strone z resjestracją!! i logowaniem
