@@ -14,3 +14,4 @@ class Name(AbstractUser):
     country=models.CharField(default='', max_length=30)
     def __str__(self):
         return self.name
+

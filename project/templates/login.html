@@ -1,5 +1,6 @@
 {% extends "base.html" %}
-{% block title %}Rejestracja{% endblock %}
+
+{% block title %}Logowanie{% endblock %}
 {% block content %}
 {% if messages %}
 {% for message in messages %}
@@ -14,8 +15,10 @@
           <input type="password" placeholder="Hasło" name="password">
           <input type="submit" class='btn btn-outline-dark' value="Zaloguj się"/>
         </form>
+
       </div>
     </div>
   </div>
  
   {% endblock %}
+
