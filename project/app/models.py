@@ -8,7 +8,7 @@ class Name(models.Model):
     password = models.CharField(max_length=30, default='')
     password2 = models.CharField(max_length=30, default='')
     phone = models.CharField(max_length=15, default='')
-    address = models.CharField(max_length=50, default='')
+    address = models.CharField(max_length=50, default='', null=True)
     city = models.CharField(max_length=30, default='')
     postal_code = models.CharField(max_length=6, default='')
     country = models.CharField(max_length=30, default='')
@@ -20,4 +20,4 @@ class Name(models.Model):
 #moje zadanie bedzie takie
 #zrobic system logowania
 #class Name to uzytkownik
-#zrobic strone z resjestracją!! i logowaniem
+#zrobic strone z resjestracją!! i logowaniem BANG BANG

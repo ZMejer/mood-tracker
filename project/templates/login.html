@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Logowanie{% endblock %}
+{% block content %}
+{% if messages %}
+{% for message in messages %}
+    {{ message }}
+{% endfor %}
+{% endif %}
+
+  <div id="content">
+    <div id="header">
+      Zaloguj się na mood tracker
+    </div>
+    <div id="login">
+      <div id="fields">
+        <form method="post"> {% csrf_token %}
+          <div id="space" style="margin-top: 20px;"></div>
+          <input type="email" name="email" placeholder="E-mail" required>
+          <input type="password" name="password" placeholder="Hasło" required>
+        
+          <input type="submit" value="Zaloguj się"/>
+        </form>
+        <a href="register">
+          <div id="registerask">
+             Nie masz konta? Zarejestruj się
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+ 
+{% endblock %}
