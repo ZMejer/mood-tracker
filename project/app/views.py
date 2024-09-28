@@ -1,11 +1,12 @@
 from django.shortcuts import render
 from django.contrib import messages
 from .models import Name
+import calendar
+from django.utils import timezone
 
  
 def home(request):
-    
-    return render(request, "home.html", context)
+    return render(request, "home.html")
 
 
 def register(request):
@@ -32,5 +33,18 @@ def register(request):
     context = {'names':names}
     return render(request, "register.html")
 
-def login(request):
-    return render(request, "login.html")
+  
+def journal(request):
+    return render(request, "journal.html")
+
+def diet(request):
+    now = timezone.localtime(timezone.now())
+    cal = calendar.monthcalendar(now.year, now.month)
+    month = now.month
+    weekdays = calendar.weekheader(3).split()
+    for week in cal:
+        for day in range(len(week)):
+            if week[day] == 0:
+                week[day] = None
+    context = { 'cal': cal, 'weekdays': weekdays, 'month': month }
+    return render(request, "diet.html", context)
