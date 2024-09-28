@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Rejestracja{% endblock %}
+{% block content %}
+{% if messages %}
+{% for message in messages %}
+    {{ message }}
+{% endfor %}
+{% endif %}
+
+  <div id="content">
+    <h1>Zaloguj się</h1>
+        <form method="post"> {% csrf_token %}
+          <input type="text" placeholder="Login" name="login">
+          <input type="password" placeholder="Hasło" name="password">
+          <input type="submit" class='btn btn-outline-dark' value="Zaloguj się"/>
+        </form>
+      </div>
+    </div>
+  </div>
+ 
+  {% endblock %}

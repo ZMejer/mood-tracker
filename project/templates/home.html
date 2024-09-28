@@ -8,15 +8,6 @@
         {% endfor %}
     {% endif %}
 
-    <form method="post" >  
-        {% csrf_token %}  
-        <input type="text" placeholder="Wpisz sie" name="name">
-        <button type="submit">Klik</button>
-    </form>  
-<br>
-    <a href="register" target="_blank" rel="noopener noreferrer">Zarejestruj się</a>
-    {% for name in names %}
-        {{ name }} <br>
-    {% endfor %}
+
 
 {% endblock %}
