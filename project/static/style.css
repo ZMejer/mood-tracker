@@ -41,3 +41,21 @@ input[type="radio"]{
 body {
     font-size:21px;
 }
+
+#register, #login{
+    background-color: #7cb46b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 10px;
+    cursor: pointer;
+}
+
+#register input, #login input {
+  margin: 10px 25px;
+}
+
