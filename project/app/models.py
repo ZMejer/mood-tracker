@@ -5,3 +5,4 @@ class Name(models.Model):
     surname = models.CharField(max_length=35, default='')
     def __str__(self):
         return self.name
+
