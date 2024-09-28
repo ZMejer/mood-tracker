@@ -22,12 +22,13 @@ def register(request):
         city = request.POST.get('city')
         postal_code = request.POST.get('postal_code')
         country = request.POST.get('country')
-        messages.error(request, f'Użytkownik {name} {surname} nie został dodany do bazy danych')
+        
         try:
             messages.success(request, f'Użytkownik {name} {surname} został dodany do bazy danych')
             newName = Name.objects.create(name=name, surname=surname, age=age, email=email, password=password, password2=password2, phone=phone, address=address, city=city, postal_code=postal_code, country=country)
         except Exception as e:
             messages.error(request, f'Błąd: {str(e)}')
+            
     context = {'names':names}
     return render(request, "register.html")
 
