@@ -48,3 +48,7 @@ def diet(request):
                 week[day] = None
     context = { 'cal': cal, 'weekdays': weekdays, 'month': month }
     return render(request, "diet.html", context)
+
+def login(request):
+    
+    return render(request, "login.html")

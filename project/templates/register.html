@@ -15,21 +15,21 @@
       <div id="fields">
         <form method="post"> {% csrf_token %}
           <div id="space" style="margin-top: 20px;"></div>
-          <input type="email" name="email" placeholder="E-mail">
-          <input type="password" name="password" placeholder="Hasło">
-          <input type="password" name="password2" placeholder="Powtórz hasło">
-          <input type="text" name="name" placeholder="Nazwa użytkownika">
-          <input type="text" name="surname" placeholder="Nazwa użytkownika">
-          <input type="text" name="age" placeholder="Wiek">
-          <input type="text" name="phone" placeholder="Telefon">
-          <input type="text" name="address" placeholder="Adres">
-          <input type="text" name="city" placeholder="Miasto">
-          <input type="text" name="postal_code" placeholder="Kod pocztowy">
-          <input type="text" name="country" placeholder="Kraj">
+          <input type="email" name="email" placeholder="E-mail" required>
+          <input type="password" name="password" placeholder="Hasło" required>
+          <input type="password" name="password2" placeholder="Powtórz hasło" required>
+          <input type="text" name="name" placeholder="Nazwa użytkownika" required>
+          <input type="text" name="surname" placeholder="Nazwa użytkownika" required>
+          <input type="text" name="age" placeholder="Wiek" required>
+          <input type="text" name="phone" placeholder="Telefon" required>
+          <input type="text" name="address" placeholder="Adres" >
+          <input type="text" name="city" placeholder="Miasto" required>
+          <input type="text" name="postal_code" placeholder="Kod pocztowy" required>
+          <input type="text" name="country" placeholder="Kraj" required>
         
           <input type="submit" value="Zarejestruj się"/>
         </form>
-        <a href="">
+        <a href="login">
           <div id="log_in">
              Posiadasz konto?
           </div>
