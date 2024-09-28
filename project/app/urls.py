@@ -7,4 +7,5 @@ urlpatterns = [
     path("journal", views.journal, name="journal"),
     path("diet", views.diet, name="diet"),
     path("register", views.register, name="register"),
+    path("login", views.login, name="login")
 ]
