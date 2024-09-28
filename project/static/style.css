@@ -1,3 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #013927!important;
+  color: #ffffff;
+  line-height: 1.6;
+  font-size:21px;
+}
+
 input[type="radio"]{
     appearance: none;
     border: 1px solid #d3d3d3;
@@ -6,7 +20,6 @@ input[type="radio"]{
     content: none;
     outline: none;
     margin: 0;
-    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
  }
  
  input[type="radio"]:checked {
@@ -38,6 +51,95 @@ input[type="radio"]{
     background-color: #b80f0a;
 }
 
-body {
-    font-size:21px;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #bfbfbf;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    position: fixed; 
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    margin-right: 5px; 
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #013927;
+}
+
+.menu a, .logout a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #013927;
+    margin: 0 15px;
+    padding: 8px 15px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.menu a {
+    min-width: 140px; 
+}
+
+.menu a:hover {
+    background-color: #013927;
+    color: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0px 4px 12px rgba(0, 100, 0, 0.3); 
+}
+
+.logout a {
+    color: #121111; 
+    padding: 8px 20px;
+    border: 2px solid #013927; 
+    border-radius: 8px;
+    transition: border-color 0.3s, color 0.3s, box-shadow 0.3s;
+    background-color: transparent; 
+}
+
+.logout a:hover {
+    border-color: #014d34; 
+    color: #121111; 
+    box-shadow: 0px 4px 12px rgba(0, 100, 0, 0.3); 
+}
+
+.container {
+  max-width: 1200px;
+  margin: 100px auto; 
+  padding: 20px;
+  background: white; 
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+
+h1 {
+    font-size: 32px;
+    color: #013927;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
