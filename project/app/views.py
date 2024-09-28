@@ -32,5 +32,5 @@ def register(request):
     context = {'names':names}
     return render(request, "register.html")
 
-def huj(request):
-    return render(request, "huj.html")
+def login(request):
+    return render(request, "login.html")
