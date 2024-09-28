@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Rejestracja{% endblock %}
+{% block content %}
+{% if messages %}
+{% for message in messages %}
+    {{ message }}
+{% endfor %}
+{% endif %}
+
+  <div id="content">
+    <div id="header">
+      Zarejestruj na mood tracker
+    </div>
+    <div id="register">
+      <div id="fields">
+        <form method="post"> {% csrf_token %}
+          <div id="space" style="margin-top: 20px;"></div>
+          <input type="email" name="email" placeholder="E-mail">
+          <input type="password" name="password" placeholder="Hasło">
+          <input type="password" name="password2" placeholder="Powtórz hasło">
+          <input type="text" name="name" placeholder="Nazwa użytkownika">
+          <input type="text" name="surname" placeholder="Nazwa użytkownika">
+          <input type="text" name="age" placeholder="Wiek">
+          <input type="text" name="phone" placeholder="Telefon">
+          <input type="text" name="address" placeholder="Adres">
+          <input type="text" name="city" placeholder="Miasto">
+          <input type="text" name="postal_code" placeholder="Kod pocztowy">
+          <input type="text" name="country" placeholder="Kraj">
+        
+          <input type="submit" value="Zarejestruj się"/>
+        </form>
+        <a href="">
+          <div id="log_in">
+             Posiadasz konto?
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+ 
+  {% endblock %}
