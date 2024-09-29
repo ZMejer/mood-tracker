@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %} Rate yo mood {% endblock %}
+
+{% block content %}
+
+<div class="wrappContainer">
+    
+    <h1 id="descExe">Rate yo mood</h1>
+    
+    <div class="ali">
+    <form name="formA" id="formExe" onchange="testFunc()" >
+    <label class="rad-label">
+      <input type="radio"   class="rad-input" name="exeRad" value=1>
+      <div class="rad-design"></div>
+      <div class="rad-text">1</div>
+    </label>
+    <label class="rad-label">
+      <input type="radio"  class="rad-input" name="exeRad" value=2>
+      <div class="rad-design"></div>
+      <div class="rad-text">2</div>
+    </label>
+    <label class="rad-label">
+      <input type="radio"  class="rad-input" name="exeRad" value=3>
+      <div class="rad-design"></div>
+      <div class="rad-text">3</div>
+    </label>
+      <label class="rad-label">
+      <input type="radio"  class="rad-input" name="exeRad" value=4>
+      <div class="rad-design"></div>
+      <div class="rad-text">4</div>
+    </label>
+    <label class="rad-label">
+        <input type="radio"  class="rad-input" name="exeRad" value=5>
+        <div class="rad-design"></div>
+        <div class="rad-text">5</div>
+      </label>
+      <label class="rad-label">
+        <input type="radio"  class="rad-input" name="exeRad" value=6>
+        <div class="rad-design"></div>
+        <div class="rad-text">6</div>
+      </label>
+      <label class="rad-label">
+        <input type="radio"  class="rad-input" name="exeRad" value=7>
+        <div class="rad-design"></div>
+        <div class="rad-text">7</div>
+      </label>
+      <label class="rad-label">
+        <input type="radio"  class="rad-input" name="exeRad" value=8>
+        <div class="rad-design"></div>
+        <div class="rad-text">8</div>
+      </label>
+      <label class="rad-label">
+        <input type="radio"  class="rad-input" name="exeRad" value=9>
+        <div class="rad-design"></div>
+        <div class="rad-text">9</div>
+      </label>
+      <label class="rad-label">
+        <input type="radio"  class="rad-input" name="exeRad" value=10>
+        <div class="rad-design"></div>
+        <div class="rad-text">10</div>
+      </label>
+
+  </form>
+  <h1 id="ratedExe">AI summary:</h1>
+  </div>
+</div>
+{% endblock %}

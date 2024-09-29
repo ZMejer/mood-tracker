@@ -5,10 +5,10 @@
     <h1 class="haje">Your journal!</h1>
     <div class="buttons-container">
         <a href="{% url 'diet' %}" class="journal-btn">Dieta</a>
-        <button class="journal-btn" onclick="alert('Humor')">Humor</button>
-        <button class="journal-btn" onclick="alert('Nawyki')">Nawyki</button>
-        <button class="journal-btn" onclick="alert('Ćwiczenia')">Ćwiczenia</button>
-        <button class="journal-btn" onclick="alert('Cele')">Cele</button>
+        <a href="{% url 'exercise' %}" class="journal-btn">Humor</a>
+        <button class="journal-btn">Nawyki</button>
+        <button class="journal-btn">Ćwiczenia</button>
+        <button class="journal-btn" >Cele</button>
     </div>
 </div>
 {% endblock %}
