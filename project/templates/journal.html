@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 {% block title %}Mój dziennik{% endblock %}
 {% block content %}
-
-<a href="{% url 'diet' %}"><button>Dieta</button></a>
+<div class="journal-container"></div>
+    <h1 class="haje">Your journal!</h1>
+    <div class="buttons-container">
+        <a href="{% url 'diet' %}" class="journal-btn">Dieta</a>
+        <button class="journal-btn" onclick="alert('Humor')">Humor</button>
+        <button class="journal-btn" onclick="alert('Nawyki')">Nawyki</button>
+        <button class="journal-btn" onclick="alert('Ćwiczenia')">Ćwiczenia</button>
+        <button class="journal-btn" onclick="alert('Cele')">Cele</button>
+    </div>
+</div>
 {% endblock %}
