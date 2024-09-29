@@ -225,7 +225,7 @@ p {
     color: #333;
     margin-bottom: 20px;
     text-align: justify;
-
+}
   #register, #login{
     background-color: #7cb46b;
     color: white;
@@ -243,4 +243,6 @@ p {
   margin: 10px 25px;
 }
 
-
+.msg {
+    margin-top:20px;
+}
