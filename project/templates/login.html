@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
-
 {% block title %}Logowanie{% endblock %}
 {% block content %}
+
 
   <div id="content">
 
@@ -13,9 +13,17 @@
           <input type="submit" class='btn btn-outline-dark' value="Zaloguj się"/>
         </form>
 
+    <form method="post"> 
+      {% csrf_token %}
+      <div class="input-group">
+        <input type="text" placeholder="Login" name="login" required>
       </div>
-    </div>
+      <div class="input-group">
+        <input type="password" placeholder="Hasło" name="password" required>
+      </div>
+      <input type="submit" class='btn btn-outline-dark' value="Zaloguj się"/>
+    </form>
+    <p class="register-link">Nie masz konta? <a href="{% url 'register' %}">Zarejestruj się</a></p>
   </div>
-
-  {% endblock %}
-
+</div>
+{% endblock %}
