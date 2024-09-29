@@ -94,6 +94,7 @@ def loginPage(request):
         if user is not None:
             login(request,user)
             messages.success(request, f'Witaj {user_login}. Jesteś teraz zalogowany.')
+            return redirect('home')
         else:
             messages.error(request, 'Hasło jest nieprawidłowe lub użytkownik nie istnieje.')
     return render(request, "login.html")
