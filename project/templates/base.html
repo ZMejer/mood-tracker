@@ -12,8 +12,8 @@
 <body>
     <div class="navbar">
         <div class="logo">
-            <img style="width:100px;height:100px;" src="{% static 'logo.png' %}" alt="Logo"> 
-            <div class="title">Health Tracker</div>
+            <a href="{% url 'home' %}"><img style="width:100px;height:100px;" src="{% static 'logo.png' %}" alt="Logo"> </a>
+            <a href="{% url 'home' %}" style="text-decoration: none;"><div class="title">Health Tracker</div></a>
         </div>
         <div class="menu">
             <a href="{% url 'home' %}">Home</a> 
