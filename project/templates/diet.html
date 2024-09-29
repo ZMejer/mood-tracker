@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Dieta{% endblock %}
 {% block content %}
-<div class="containter">
+<div class="containter" style="margin-top:50px;">
 <h1>Diet goals</h1>
 My calorie goal: [cal goal]
 <br><br>
@@ -12,7 +12,8 @@ My calorie goal: [cal goal]
     <input type="radio" id="equal" name="calories" value="equal">
     <label for="equal">[cal goal] calories</label><br>
     <input type="radio" id="more" name="calories" value="more">
-    <label for="more">More than [cal goal] calories</label>
+    <label for="more">More than [cal goal] calories</label><br>
+    <button class="btn btn-outline-light">Submit</button>
 </form>
 <div class="col-6">
 

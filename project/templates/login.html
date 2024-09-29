@@ -2,17 +2,16 @@
 
 {% block title %}Logowanie{% endblock %}
 {% block content %}
-<div id="content">
-  <div class="container">
-    <h1 class="hhh">Zaloguj się</h1>
-    
-    {% if messages %}
-      <div class="alert">
-        {% for message in messages %}
-          {{ message }}
-        {% endfor %}
-      </div>
-    {% endif %}
+
+
+  <div id="content">
+
+    <h1>Zaloguj się</h1>
+        <form method="post"> {% csrf_token %}
+          <input type="text" placeholder="Login" name="login">
+          <input type="password" placeholder="Hasło" name="password">
+          <input type="submit" class='btn btn-outline-dark' value="Zaloguj się"/>
+        </form>
 
     <form method="post"> 
       {% csrf_token %}
