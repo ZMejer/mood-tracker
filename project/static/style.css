@@ -397,3 +397,34 @@ p {
 .msg {
     margin-top:20px;
 }
+
+#home {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 10px 20px; 
+    text-align: center;
+  }
+  
+  .home-title {
+    font-size: 36px; 
+    font-weight: bold;
+    margin-bottom: 20px; 
+  }
+  
+  .light-green-text {
+    color: #7cb46b; 
+  }
+  
+  .home-intro {
+    font-size: 20px; 
+    line-height: 1.6; 
+    margin-bottom: 30px;
+  }
+  
+  blockquote {
+    font-style: italic;
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 4px solid #7cb46b; 
+    background-color: rgba(255, 255, 255, 0.2); 
+  }

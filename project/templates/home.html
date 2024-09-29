@@ -1,13 +1,32 @@
 {% extends "base.html" %}
+{% load static %}
+
 {% block title %}Strona główna{% endblock %}
 {% block content %}
+<div id="home"> 
+    <header class="header">
+        <img src="{% static 'homeimage.png' %}" alt="Home Image" class="header-image" width="250" height="200"> 
+        <h1 class="header-title">Witaj w Monitorze Zdrowia!</h1>
+        <p class="light-green-text">Monitor Zdrowia to strona internetowa, która umożliwia użytkownikom codzienną, subiektywną ocenę swojego samopoczucia w oparciu o różnorodne wskaźniki emocjonalne i fizyczne.</p>
+    </header>
 
-    {% if messages %}
-        {% for message in messages %}
-            {{ message }}
-        {% endfor %}
-    {% endif %}
+    <section class="features">
+        <h2>Nasze Funkcje</h2>
+        <ul>
+            <li><strong>Ocena samopoczucia:</strong> Monitorowanie nastroju, poziomu energii, jakości snu i więcej.</li>
+            <li><strong>Pamiętnik emocji:</strong> Zapisz najważniejsze emocje, ich przyczyny i reakcje.</li>
+            <li><strong>Realizacja celów:</strong> Śledzenie postępów w realizacji osobistych celów.</li>
+        </ul>
+    </section>
 
+    <section class="testimonials">
+        <h2>Opinie Użytkowników</h2>
+        <blockquote>"Monitor Zdrowia pomógł mi lepiej zrozumieć moje emocje!" - Użytkownik A</blockquote>
+        <blockquote>"Dzięki tej aplikacji udało mi się osiągnąć moje cele zdrowotne." - Użytkownik B</blockquote>
+    </section>
+    
+    <section class="call-to-action">
+        <h2>Rozpocznij swoją podróż ku lepszemu samopoczuciu!</h2>
+    </section>
+</div>
 {% endblock %}
-
-
