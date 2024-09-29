@@ -1,29 +1,22 @@
 {% extends "base.html" %}
 
 {% block title %}Logowanie{% endblock %}
+
 {% block content %}
-
-
-  <div id="content">
-
-    <h1>Zaloguj się</h1>
-        <form method="post"> {% csrf_token %}
-          <input type="text" placeholder="Login" name="login">
-          <input type="password" placeholder="Hasło" name="password">
-          <input type="submit" class='btn btn-outline-dark' value="Zaloguj się"/>
-        </form>
+<div id="login-container">
+    <h2 id="login-header">Zaloguj się</h2>
 
     <form method="post"> 
-      {% csrf_token %}
-      <div class="input-group">
-        <input type="text" placeholder="Login" name="login" required>
-      </div>
-      <div class="input-group">
-        <input type="password" placeholder="Hasło" name="password" required>
-      </div>
-      <input type="submit" class='btn btn-outline-dark' value="Zaloguj się"/>
+        {% csrf_token %}
+        <div class="input-group">
+            <input type="text" placeholder="Login" name="login" required>
+        </div>
+        <div class="input-group">
+            <input type="password" placeholder="Hasło" name="password" required>
+        </div>
+        <input type="submit" class='btn' value="Zaloguj się"/>
     </form>
+
     <p class="register-link">Nie masz konta? <a href="{% url 'register' %}">Zarejestruj się</a></p>
-  </div>
 </div>
 {% endblock %}
