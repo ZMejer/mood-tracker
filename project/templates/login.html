@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
+
 {% block title %}Logowanie{% endblock %}
 {% block content %}
 {% if messages %}
@@ -9,6 +10,7 @@
 {% endif %}
 
   <div id="content">
+
     <h1>Zaloguj się</h1>
         <form method="post"> {% csrf_token %}
           <input type="text" placeholder="Login" name="login">
@@ -19,6 +21,6 @@
       </div>
     </div>
   </div>
- 
+
   {% endblock %}
 

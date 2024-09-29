@@ -77,4 +77,3 @@ def logoutUser(request):
     logout(request)
     messages.success(request, 'Pomyślnie wylogowano.')
     return redirect('home')
-
