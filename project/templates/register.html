@@ -2,41 +2,41 @@
 {% block title %}Rejestracja{% endblock %}
 {% block content %}
 {% if messages %}
-{% for message in messages %}
-    {{ message }}
-{% endfor %}
+  {% for message in messages %}
+    <div class="alert">{{ message }}</div>
+  {% endfor %}
 {% endif %}
 
-  <div id="content">
-    <div id="header">
-      Zarejestruj na mood tracker
-    </div>
-    <div id="register">
-      <div id="fields">
-        <form method="post"> {% csrf_token %}
-          <div id="space" style="margin-top: 20px;"></div>
+<div id="content">
 
-          <input type="email" name="email" placeholder="E-mail">
-          <input type="text" name="uname" placeholder="Login">
-          <input type="password" name="password" placeholder="Hasło">
-          <input type="password" name="password2" placeholder="Powtórz hasło">
-          <input type="text" name="name" placeholder="Imie">
-          <input type="text" name="surname" placeholder="Nazwisko">
-          <input type="text" name="age" placeholder="Wiek">
-          <input type="text" name="phone" placeholder="Telefon">
-          <input type="text" name="address" placeholder="Adres">
-          <input type="text" name="city" placeholder="Miasto">
-          <input type="text" name="postal_code" placeholder="Kod pocztowy">
-          <input type="text" name="country" placeholder="Kraj">
+  <div id="register">
+
+    <div id="fields">
+      <form method="post"> {% csrf_token %}
+        <input type="email" name="email" placeholder="E-mail" required>
+        <input type="text" name="uname" placeholder="Login" required>
+        <input type="password" name="password" placeholder="Hasło" required>
+        <input type="password" name="password2" placeholder="Powtórz hasło" required>
+        <input type="text" name="name" placeholder="Imię" required>
+        <input type="text" name="surname" placeholder="Nazwisko" required>
+        <input type="text" name="age" placeholder="Wiek" required min="0">
+        <input type="text" name="phone" placeholder="Telefon" required>
+        <input type="text" name="address" placeholder="Adres">
+        <input type="text" name="city" placeholder="Miasto">
+        <input type="text" name="postal_code" placeholder="Kod pocztowy">
+        <input type="text" name="country" placeholder="Kraj">
+        
+        <div class="button-container">
           <input type="submit" value="Zarejestruj się"/>
-        </form>
-        <a href="login">
-          <div id="log_in">
-             Posiadasz konto?
-          </div>
-        </a>
-      </div>
+        </div>
+      </form>
+      <a href="login">
+        <div id="log_in">
+          Posiadasz konto?
+        </div>
+      </a>
     </div>
   </div>
- 
-  {% endblock %}
+</div>
+
+{% endblock %}
