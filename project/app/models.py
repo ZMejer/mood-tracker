@@ -15,3 +15,11 @@ class Name(AbstractUser):
     country=models.CharField(default='', max_length=30)
     def __str__(self):
         return self.name
+
+class Diet(models.Model):
+    uname=models.CharField(default='', max_length=30)
+    status=models.CharField(default='', max_length=30)
+    date = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return str(self.date)+" "+self.uname

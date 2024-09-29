@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib import messages
-from .models import Name
+from .models import Name, Diet
 import calendar
 from django.utils import timezone
 from django.contrib.auth import authenticate, login, logout
@@ -46,20 +46,45 @@ def journal(request):
     else:
         return redirect('login') 
 
+
+
+
 def diet(request):
     if request.user.is_authenticated:
         now = timezone.localtime(timezone.now())
         cal = calendar.monthcalendar(now.year, now.month)
         month = now.month
-        weekdays = calendar.weekheader(3).split()
+        weekdays = calendar.weekheader(3).split()  
         for week in cal:
             for day in range(len(week)):
                 if week[day] == 0:
                     week[day] = None
-        context = { 'cal': cal, 'weekdays': weekdays, 'month': month }
-        return render(request, "diet.html", context)
+
+        diet_entries = Diet.objects.filter(uname=request.user.username)
+        day_statuses = {entry.date.day: entry.status for entry in diet_entries}
+
+
+        context = { 
+            'cal': cal, 
+            'weekdays': weekdays, 
+            'month': month,
+            'day_statuses': day_statuses,
+            'diet_entries': diet_entries
+        }
+        if request.method == 'POST':
+            uname = request.user.username  
+            status = request.POST.get('calories')  
+            today = timezone.now().date()
+            Diet.objects.filter(uname=uname, date=today).delete()
+            Diet.objects.create(uname=uname, status=status)
+            return redirect('diet')
+        else:
+            return render(request, "diet.html", context)  
     else:
-        return redirect('login') 
+        return redirect('login')  
+
+
+
 
 def loginPage(request):
     if request.method == 'POST':

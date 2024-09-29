@@ -19,11 +19,13 @@
             <input type="radio" id="more" name="calories" value="more">
             <label for="more">More than [cal goal] calories</label><br>
         </div>
+
         <button class="btn btn-outline-dark" style="width: 200px; margin-top: 10px;">Submit</button>
     </form>
     <div class="row">
     <div class="col-3"></div>
     <div class="col-6">
+        
         <table class="table table-bordered mt-3">
             <thead>
                 <tr>
@@ -37,7 +39,22 @@
                     <tr>
                         {% for day in week %}
                             {% if day %}
+                                
+                                {% for key, value in day_statuses.items %}
+                                {% if day == key %}
+
+                                    {% if value == 'less' %}
+                                        <td class="calendar-day" style="background-color: #ffd500;">{{ day }}</td>
+                                    {% elif value == 'more' %}
+                                        <td class="calendar-day" style="background-color: #b80f0a;" >{{ day }}</td>
+                                    {% else %}
+                                    <td class="calendar-day" style=" background-color: #7cb46b;">{{ day }}</td>
+                                    {% endif %}
+
+                                {% else %}
                                 <td class="calendar-day">{{ day }}</td>
+                                {% endif %}
+                            {% endfor %}
                             {% else %}
                                 <td class="empty-cell">&nbsp;</td>
                             {% endif %}
